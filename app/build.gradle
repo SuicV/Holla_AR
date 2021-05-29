@@ -2,6 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
+    // add compile options
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.wwe.holla_ar"
@@ -26,4 +32,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // add sceneform dependency
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
 }
+
+apply plugin: 'com.google.ar.sceneform.plugin'
