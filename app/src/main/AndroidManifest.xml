@@ -15,9 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- add this tag to indicate that arcore is required to launch the application-->
+        <meta-data android:name="com.google.ar.core" android:value="required" />
+
         <activity android:name=".MainActivity">
-            <!-- add this tag to indicate that arcore is required to launch the application-->
-            <meta-data android:name="com.google.ar.core" android:value="required" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
